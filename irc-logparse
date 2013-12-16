@@ -23,5 +23,10 @@ while true ; do
     esac
 done
 
+d=`mktemp -d`
 for arg do
-    d=`mktemp -d`
+    f="$d/$year-$month-$day-$arg.txt"
+    wget "http://$server/$year/$month/$day/%23$arg.txt" -O "$f" > /dev/null 2>&1
+    echo "$arg $year/$month/$day"
+    cat $f | egrep -v "^===" | sed -e 's/  \* / /g' -e 's/[<>]//g' | awk '{ print $2 }' | sort | uniq -c | sort -nk1
+done
