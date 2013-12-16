@@ -24,7 +24,6 @@ irc-logparse has the following options:
 
 # Examples
 
-
-    irc-logparse -m 11 -d 01..15 juju
+    irc-logparse -m 11 -d 15 juju
 
 Get the running total from the first of November to the 15th from the #juju room
