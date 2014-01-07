@@ -26,4 +26,4 @@ irc-logparse has the following options:
 
     irc-logparse -m 11 -d 15 juju
 
-Get the running total from the first of November to the 15th from the #juju room
+Get the running total, and user post count from November 15th in the current year from the #juju room. Note default server is http://irclogs.ubuntu.com.
